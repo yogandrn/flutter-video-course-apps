@@ -39,7 +39,7 @@ class CourseModel extends Equatable {
         .map((e) => CourseSectionModel.fromJson(e as Map<String, dynamic>))
         .where((s) => s.deletedAt == null)
         .toList(),
-    isAccessable: json['is_accessable'],
+    isAccessable: json['is_accessable'] ?? false,
   );
 
   final int id;

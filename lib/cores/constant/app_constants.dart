@@ -2,7 +2,7 @@
 abstract final class AppConstants {
   static const baseUrl =
       'https://github.com/yogandrn/vigilant-octo-succotash/raw/refs/heads/main';
-
+  static const coursesEndpoint = "/courses.json";
   static const pageLimit = 20;
   static const searchDebounce = Duration(milliseconds: 250);
   static const minSearchChars = 3;
