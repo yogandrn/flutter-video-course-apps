@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'cores/di/locator.dart';
+import 'cores/routes/app_router.dart';
+import 'cores/themes/app_theme.dart';
+
 void main() {
-  runApp(const MyApp());
+  setupServices();
+  runApp(
+    MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.light,
+      routerConfig: appRouter,
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
